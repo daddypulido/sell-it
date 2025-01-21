@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import styles from "./layout.module.css";
-import Image from "next/image";
+import "./globals.css"
 import Link from "next/link";
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,18 +30,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <nav className={styles.navbar}>
-
-        <div>
-        <Image src="/images/Chicocustom.png" alt="Chico Custom Lab" width={120} height={40}/>
+        <div className="flex flex-col min-h-screen">
+        <Navbar/>
+        <main className="flex-grow">{children}</main>
+        <Footer/>
         </div>
-        <div>
-            <Link href="/" className={styles["nav-item"]}>Home</Link>
-            <Link href="/shop" className={styles["nav-item"]}>Shop</Link>
-            <Link href="/contact" className={styles["nav-item"]}>Contact</Link>
-          </div>
-      </nav>
-        {children}
+
+       
       </body>
     </html>
   );
