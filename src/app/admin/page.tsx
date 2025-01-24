@@ -52,20 +52,20 @@ export default function AdminPage() {
 
       <div className="mb-4 flex items-center gap-2">
         <input
-          className="border p-2"
+          className="border p-2 text-black focus:outline-none focus:border-blue-500"
           type="text"
           placeholder="Product Name"
           value={newProduct.name}
           onChange={(e) => setNewProduct({ ...newProduct, name: e.target.value })}
         />
         <input
-          className="border p-2"
+          className="border p-2 text-black  focus:outline-none focus:border-blue-500"
           type="number"
           placeholder="Price"
           value={newProduct.price}
           onChange={(e) => setNewProduct({ ...newProduct, price: e.target.value })}
         />
-        <button className="bg-blue-500 text-white p-2 rounded" onClick={handleAddProduct}>
+        <button className="bg-[#00008B] text-white p-2 rounded" onClick={handleAddProduct}>
           Add Product
         </button>
       </div>

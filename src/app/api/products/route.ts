@@ -8,15 +8,14 @@ type Product = {
 
 
 let products: Product [] = [
-    {id:1, name:"Product A", price: 20},
-    {id:2, name:"Product B", price: 25},
+    {id:1, name:"BCV Original Banner", price: 25},
+    {id:2, name:"BCV Grafitti Banner", price: 25},
 
 ]
 
-
 export async function GET() {
-    return NextResponse.json(products);
-  }
+  return NextResponse.json(products);
+}
 
   export async function POST(req: Request) {
     const newProduct: Omit<Product, "id"> = await req.json();
