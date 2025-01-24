@@ -7,7 +7,7 @@ type Product = {
 };
 
 
-let products: Product [] = [
+const products: Product [] = [
     {id:1, name:"BCV Original Banner", price: 25},
     {id:2, name:"BCV Grafitti Banner", price: 25},
 
