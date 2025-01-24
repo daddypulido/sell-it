@@ -1,6 +1,6 @@
 export default function Shop() {
     return (
-        <div>
+        <div className="text-white">
             <h1>Shop Our Custom Products!</h1>
             <div>
                 <div>
